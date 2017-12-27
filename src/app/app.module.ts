@@ -13,7 +13,8 @@ import {
 import { AppComponent } from './app.component';
 import { ImgCardComponent } from './img-card/img-card.component';
 import { ToDoComponent } from './to-do/to-do.component';
-import { FormsModule } from '@angular/forms'
+import { TodoService } from './to-do/to-do.service';
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
