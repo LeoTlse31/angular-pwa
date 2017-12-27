@@ -9,20 +9,19 @@ import { environment } from '../environments/environment';
 import { 
   MatToolbarModule,
   MatCardModule,
-  MatSnackBar,
-  MatGridListModule,
   MatButtonModule 
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { ToDoComponent } from './to-do/to-do.component';
-import { TodoService } from './to-do/to-do.service';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { BoardComponent } from './presentation/board/board.component';
+import { CellComponent } from './presentation/cell/cell.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToDoComponent
+    BoardComponent,
+    CellComponent
   ],
   imports: [
     BrowserModule,
@@ -30,12 +29,9 @@ import { ReactiveFormsModule } from '@angular/forms'
     MatToolbarModule,
     MatCardModule,
 	ReactiveFormsModule,
-	MatGridListModule,
-    MatButtonModule,
-	FormsModule,
-    HttpModule
+    MatButtonModule
   ],
-  providers: [TodoService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
