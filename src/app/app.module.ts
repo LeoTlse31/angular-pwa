@@ -12,21 +12,24 @@ import {
 
 import { AppComponent } from './app.component';
 import { ImgCardComponent } from './img-card/img-card.component';
-
+import { ToDoComponent } from './to-do/to-do.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ImgCardComponent
+    ImgCardComponent,
+    ToDoComponent
   ],
   imports: [
     BrowserModule,
     environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : [],
     MatToolbarModule,
     MatCardModule,
+	ReactiveFormsModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
