@@ -1,7 +1,7 @@
 {
   "name": "Morpion pwa",
   "short_name": "Morpion",
-  "description": "Angular morpion game",
+  "description": "Morpion game",
   "icons": [{
     "src": "assets/icon-128x128.png",
       "sizes": "128x128",
@@ -22,6 +22,6 @@
   "theme_color": "#000000",
   "background_color": "#e0e0e0",
   "start_url": "/index.html",
-  "display": "Fullscreen",
+  "display": "standalone",
   "orientation": "portrait"
 }
