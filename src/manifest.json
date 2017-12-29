@@ -1,7 +1,7 @@
 {
   "name": "Morpion pwa",
   "short_name": "Morpion",
-  "description": "Morpion game",
+  "description": "Angular morpion game",
   "icons": [{
     "src": "assets/icon-128x128.png",
       "sizes": "128x128",
