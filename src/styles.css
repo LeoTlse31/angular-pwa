@@ -2,7 +2,7 @@
 
 body {
   font-family: sans-serif;
-  background: #DCEED1;
+  background: gray !important;
   color: #595959;
     overflow: hidden;
 }
@@ -28,6 +28,7 @@ button {
   float: right;
   margin-top: 2.5em;
   font-size: .9em;
+
   font-weight: 500;
   text-transform: uppercase;
   padding: .75em 1em;
@@ -55,7 +56,7 @@ table {
 .cell-content {
   cursor: pointer;
   font-size: 48px;
-  background: #AAC0AA;
+  background: white;
   width: 100px;
   height: 100px;
   display: inline-block;
@@ -75,7 +76,7 @@ table {
   width: 3.5em;
   overflow: hidden;
   border-radius: 10px;
-  background: #AAC0AA;
+  background: white;
   margin: .5em;
 }
 
