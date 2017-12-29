@@ -1,4 +1,4 @@
-@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 
 body {
   font-family: sans-serif;
@@ -19,6 +19,11 @@ h1 {
   display: inline-block;
 }
 
+h2 {
+	
+	text-align:center;
+	color:white !important;
+}
 button {
   float: right;
   margin-top: 2.5em;
