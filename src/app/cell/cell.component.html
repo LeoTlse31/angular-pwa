@@ -1,0 +1,4 @@
+<span class="cell-content" (click)="select.emit()">
+	<span *ngIf="value">{{ value }}</span>
+	<span class="next-value" *ngIf="!value">{{ nextValue }}</span>
+</span>

@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { MobxAngularModule } from 'mobx-angular';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { 
   MatToolbarModule,
@@ -14,22 +16,30 @@ import {
 
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BoardComponent } from './presentation/board/board.component';
-import { CellComponent } from './presentation/cell/cell.component'
+import { GameComponent } from './game/game.component';
+import { ScoreComponent } from './score/score.component';
+import { CellComponent } from './cell/cell.component';
+import { ControlsComponent } from './controls/controls.component';
+import { BoardComponent } from './board/board.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    BoardComponent,
-    CellComponent
+    GameComponent,
+    ScoreComponent,
+    CellComponent,
+    ControlsComponent,
+    BoardComponent
   ],
   imports: [
-    BrowserModule,
     environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : [],
-    MatToolbarModule,
-    MatCardModule,
-	ReactiveFormsModule,
-    MatButtonModule
+    BrowserModule,
+    FormsModule,
+	BrowserAnimationsModule,
+    HttpModule,
+	MatToolbarModule,
+    MobxAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]

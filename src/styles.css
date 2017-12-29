@@ -1,55 +1,86 @@
-@import '~normalize.css/normalize.css';
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
-
-/*** Styles added to fix the issue with zoom in on iphone ***/
-/* iPhone < 5: */
-@media screen and (device-aspect-ratio: 2/3) {
-  select, textarea, input[type="text"], input[type="password"],
-  input[type="datetime"], input[type="datetime-local"],
-  input[type="date"], input[type="month"], input[type="time"],
-  input[type="week"], input[type="number"], input[type="email"],
-  input[type="url"]{ font-size: 16px !important; }
-}
-
-/* iPhone 5, 5C, 5S, iPod Touch 5g */
-@media screen and (device-aspect-ratio: 40/71) {
-  select, textarea, input[type="text"], input[type="password"],
-  input[type="datetime"], input[type="datetime-local"],
-  input[type="date"], input[type="month"], input[type="time"],
-  input[type="week"], input[type="number"], input[type="email"],
-  input[type="url"]{ font-size: 16px !important; }
-}
-
-/* iPhone 6, iPhone 6s, iPhone 7 portrait/landscape */
-@media screen and (device-aspect-ratio: 375/667) {
-  select, textarea, input[type="text"], input[type="password"],
-  input[type="datetime"], input[type="datetime-local"],
-  input[type="date"], input[type="month"], input[type="time"],
-  input[type="week"], input[type="number"], input[type="email"],
-  input[type="url"]{ font-size: 16px !important; }
-}
-
-/* iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus portrait/landscape */
-@media screen and (device-aspect-ratio: 9/16) {
-  select, textarea, input[type="text"], input[type="password"],
-  input[type="datetime"], input[type="datetime-local"],
-  input[type="date"], input[type="month"], input[type="time"],
-  input[type="week"], input[type="number"], input[type="email"],
-  input[type="url"]{ font-size: 16px !important; }
-}
 body {
-  background-color: #fff;
-  color: #fff;
-  font-family: 'Dosis', Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  margin: 0px;
+  font-family: sans-serif;
+  background: #DCEED1;
+  color: #595959;
+    overflow: hidden;
+}
+
+
+ttt-root {
+  margin: 100px auto;
+  display: block;
+  max-width: 700px;
+  padding: 20px 40px;
 }
 
 h1 {
+  display: inline-block;
+}
+
+button {
+  float: right;
+  margin-top: 2.5em;
+  font-size: .9em;
+  font-weight: 500;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 3em;
+  padding: .75em 1em;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: #696D7D;
+  color: white;
+  cursor: pointer;
+  transition: background .1s;
+}
+
+button:hover {
+  background: #606472;
+}
+
+button:active {
+  background: #4D505B;
+}
+
+table {
+  margin: 0 auto;
+}
+
+.cell-content {
+  cursor: pointer;
+  font-size: 48px;
+  background: #AAC0AA;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  line-height: 100px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.score {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 1em;
+}
+
+.score > div {
+  width: 3.5em;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #AAC0AA;
+  margin: .5em;
+}
+
+.score > div > div,
+.score > div > span {
+  padding: .3em;
+  display: block;
+}
+
+.score > div > div {
+  background: #595959;
+  color: white;
 }
