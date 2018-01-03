@@ -44,6 +44,7 @@ button {
 button:hover {
   background: #606472;
 }
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 button:active {
   background: #4D505B;
