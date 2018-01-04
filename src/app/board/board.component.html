@@ -1,7 +1,0 @@
-<table *mobxAutorun>
-	<tr *ngFor="let row of game.board; let i = index">
-		<td *ngFor="let cell of row; let j = index">
-			<ttt-cell [value]="cell" [nextValue]="game.currentPlayer" (click)="playCell(i,j)"></ttt-cell>
-		</td>
-	</tr>
-</table>

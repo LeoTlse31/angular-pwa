@@ -3,43 +3,31 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-import { MobxAngularModule } from 'mobx-angular';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-import { 
-  MatToolbarModule,
-  MatCardModule,
-  MatButtonModule 
-} from '@angular/material';
+import { MaterializeModule } from 'angular2-materialize';
 
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { GameComponent } from './game/game.component';
-import { ScoreComponent } from './score/score.component';
-import { CellComponent } from './cell/cell.component';
-import { ControlsComponent } from './controls/controls.component';
-import { BoardComponent } from './board/board.component';
-
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { routing } from './app.routing';
+import { usersRouting } from "./users/users.routing";
+import { UsersModule } from "./users/users.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameComponent,
-    ScoreComponent,
-    CellComponent,
-    ControlsComponent,
-    BoardComponent
+    NavBarComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
-    environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : [],
     BrowserModule,
     FormsModule,
-	BrowserAnimationsModule,
     HttpModule,
-	MatToolbarModule,
-    MobxAngularModule
+    MaterializeModule,
+    UsersModule,
+    usersRouting,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
